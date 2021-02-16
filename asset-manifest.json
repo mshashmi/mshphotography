@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mshphotography/static/css/main.745570ff.chunk.css",
-    "main.js": "/mshphotography/static/js/main.6e904bc4.chunk.js",
-    "main.js.map": "/mshphotography/static/js/main.6e904bc4.chunk.js.map",
+    "main.css": "/mshphotography/static/css/main.a5810c45.chunk.css",
+    "main.js": "/mshphotography/static/js/main.5e6da864.chunk.js",
+    "main.js.map": "/mshphotography/static/js/main.5e6da864.chunk.js.map",
     "runtime-main.js": "/mshphotography/static/js/runtime-main.f2c32c90.js",
     "runtime-main.js.map": "/mshphotography/static/js/runtime-main.f2c32c90.js.map",
     "static/js/2.8ce470f9.chunk.js": "/mshphotography/static/js/2.8ce470f9.chunk.js",
@@ -10,13 +10,14 @@
     "static/js/3.246e470d.chunk.js": "/mshphotography/static/js/3.246e470d.chunk.js",
     "static/js/3.246e470d.chunk.js.map": "/mshphotography/static/js/3.246e470d.chunk.js.map",
     "index.html": "/mshphotography/index.html",
-    "static/css/main.745570ff.chunk.css.map": "/mshphotography/static/css/main.745570ff.chunk.css.map",
-    "static/js/2.8ce470f9.chunk.js.LICENSE.txt": "/mshphotography/static/js/2.8ce470f9.chunk.js.LICENSE.txt"
+    "static/css/main.a5810c45.chunk.css.map": "/mshphotography/static/css/main.a5810c45.chunk.css.map",
+    "static/js/2.8ce470f9.chunk.js.LICENSE.txt": "/mshphotography/static/js/2.8ce470f9.chunk.js.LICENSE.txt",
+    "static/media/camera.d25775ca.svg": "/mshphotography/static/media/camera.d25775ca.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f2c32c90.js",
     "static/js/2.8ce470f9.chunk.js",
-    "static/css/main.745570ff.chunk.css",
-    "static/js/main.6e904bc4.chunk.js"
+    "static/css/main.a5810c45.chunk.css",
+    "static/js/main.5e6da864.chunk.js"
   ]
 }
