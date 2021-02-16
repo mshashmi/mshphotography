@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../css/index.css';
-import Logo from '../images/Y.png';
+import Logo from '../images/camera.svg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Main from './Main';
 import Contact from './Contact';
@@ -26,7 +26,7 @@ export default class Header extends React.Component<Props, State> {
               <img src={Logo} alt="logo" width="50" height="50" />
             </div>
             <div className="name">
-              YIPL
+              MSH Photography
           </div>
             <Tabs selectedIndex={this.state.tabIndex}
               onSelect={(tabIndex: any) => this.setState({ tabIndex })}>

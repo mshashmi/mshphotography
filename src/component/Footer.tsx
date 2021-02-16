@@ -16,7 +16,7 @@ export default class Footer extends React.Component<Props, State> {
             <div className="App">
                 <footer className="App-footer">
                     <p>
-                        &copy; YIPL 2020
+                        &copy; MSH Photography 2020
           </p>
                 </footer>
             </div>
