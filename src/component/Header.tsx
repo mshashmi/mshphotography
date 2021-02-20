@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../css/index.css';
-import Logo from '../images/camera.svg';
+import Logo from '../images/msh.svg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Main from './Main';
 import Contact from './Contact';
