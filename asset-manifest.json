@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/mshphotography/static/css/main.a5810c45.chunk.css",
-    "main.js": "/mshphotography/static/js/main.62b466a3.chunk.js",
-    "main.js.map": "/mshphotography/static/js/main.62b466a3.chunk.js.map",
-    "runtime-main.js": "/mshphotography/static/js/runtime-main.f2c32c90.js",
-    "runtime-main.js.map": "/mshphotography/static/js/runtime-main.f2c32c90.js.map",
-    "static/js/2.8ce470f9.chunk.js": "/mshphotography/static/js/2.8ce470f9.chunk.js",
-    "static/js/2.8ce470f9.chunk.js.map": "/mshphotography/static/js/2.8ce470f9.chunk.js.map",
-    "static/js/3.246e470d.chunk.js": "/mshphotography/static/js/3.246e470d.chunk.js",
-    "static/js/3.246e470d.chunk.js.map": "/mshphotography/static/js/3.246e470d.chunk.js.map",
+    "main.css": "/mshphotography/static/css/main.dcd6301f.chunk.css",
+    "main.js": "/mshphotography/static/js/main.067f6bd5.chunk.js",
+    "main.js.map": "/mshphotography/static/js/main.067f6bd5.chunk.js.map",
+    "runtime-main.js": "/mshphotography/static/js/runtime-main.40e572df.js",
+    "runtime-main.js.map": "/mshphotography/static/js/runtime-main.40e572df.js.map",
+    "static/js/2.cdf8ac3a.chunk.js": "/mshphotography/static/js/2.cdf8ac3a.chunk.js",
+    "static/js/2.cdf8ac3a.chunk.js.map": "/mshphotography/static/js/2.cdf8ac3a.chunk.js.map",
+    "static/js/3.7c75eb37.chunk.js": "/mshphotography/static/js/3.7c75eb37.chunk.js",
+    "static/js/3.7c75eb37.chunk.js.map": "/mshphotography/static/js/3.7c75eb37.chunk.js.map",
     "index.html": "/mshphotography/index.html",
-    "static/css/main.a5810c45.chunk.css.map": "/mshphotography/static/css/main.a5810c45.chunk.css.map",
-    "static/js/2.8ce470f9.chunk.js.LICENSE.txt": "/mshphotography/static/js/2.8ce470f9.chunk.js.LICENSE.txt",
+    "static/css/main.dcd6301f.chunk.css.map": "/mshphotography/static/css/main.dcd6301f.chunk.css.map",
+    "static/js/2.cdf8ac3a.chunk.js.LICENSE.txt": "/mshphotography/static/js/2.cdf8ac3a.chunk.js.LICENSE.txt",
+    "static/media/Sajid_Pic.ba1df56f.jpg": "/mshphotography/static/media/Sajid_Pic.ba1df56f.jpg",
     "static/media/msh.d2a0c8de.svg": "/mshphotography/static/media/msh.d2a0c8de.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f2c32c90.js",
-    "static/js/2.8ce470f9.chunk.js",
-    "static/css/main.a5810c45.chunk.css",
-    "static/js/main.62b466a3.chunk.js"
+    "static/js/runtime-main.40e572df.js",
+    "static/js/2.cdf8ac3a.chunk.js",
+    "static/css/main.dcd6301f.chunk.css",
+    "static/js/main.067f6bd5.chunk.js"
   ]
 }
