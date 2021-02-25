@@ -13,12 +13,10 @@ export default class Contact extends React.Component<Props, State> {
     };
     render() {
         return (
-            <div className="App">
-                <header className="App-main">
+            <div className="App-main">
                     <p>
                         Please contact:
           </p>
-                </header>
             </div>
         );
     }

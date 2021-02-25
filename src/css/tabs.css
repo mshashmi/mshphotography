@@ -5,11 +5,11 @@
     font-weight: 500;
     margin: 0 !important;
     display: flex;
-    padding-left: 125vh;
+    list-style-type: none;
 }
 
 .react-tabs__tab{
-    margin: 0 12px;
+    margin: 0 1vh;
     bottom:0;
     padding-left: 2vh;
     cursor: pointer;
@@ -20,7 +20,6 @@
     border: none !important;
     color:var(--tabs-selected-text-color) !important;
     font-weight: 500;
-    border-bottom: 3px solid !important;
     font-family: var(--font-family-Roboto-Medium);
     padding-left: 2vh;
 }

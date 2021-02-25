@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #dcdcdc;
   height: 10vh;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #544141;
 }
 
 .name{
@@ -31,6 +31,8 @@
 
 .logo {
   padding: 1vh;
+  flex: 1 1;
+  display: flex;
 }
 
 .App-link {
