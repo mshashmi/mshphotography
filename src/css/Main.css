@@ -35,7 +35,7 @@
   .profile-pic{
     padding: 1vh;
     position: absolute;
-    right: 1vh;
+    right: -15vh;
   }
 
   .about{
@@ -43,7 +43,7 @@
     padding: 1vh;
     left: 1vh;
     top: 1vh;
-    width: 70%;
+    width: 40%;
     height: 95%;
   }
 

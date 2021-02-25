@@ -16,7 +16,7 @@ export default class Main extends React.Component<Props, State> {
         return (
             <div className="App-main">
                 <div className="profile-pic">
-                    <img src={profile_pic} alt="Profile Pic" />
+                    <img width="75%" src={profile_pic} alt="Profile Pic" />
                 </div>
                 <div className="about">
                     <div className="about-name">
