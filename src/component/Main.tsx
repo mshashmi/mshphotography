@@ -1,6 +1,5 @@
 import * as React from 'react';
 import '../css/index.css';
-import profile_pic from '../images/Sajid_Pic.jpg';
 
 interface Props {
 }
@@ -16,7 +15,7 @@ export default class Main extends React.Component<Props, State> {
         return (
             <div className="App-main">
                 <div className="profile-pic">
-                    <img width="75%" src={profile_pic} alt="Profile Pic" />
+                    <img width="75%" src="https://drive.google.com/uc?export=view&id=1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ" alt="Profile Pic" />
                 </div>
                 <div className="about">
                     <div className="about-name">
