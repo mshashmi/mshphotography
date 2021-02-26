@@ -11,16 +11,20 @@ interface Props {
 interface State {
     feedback: string;
     name: string;
-    mobile: number;
+    mobile: string;
     email_from: string;
+    isValid: boolean;
 }
 
 declare const window: any;
 
+const isValidName = (str: string) => {    return !/[~`!\*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);}
+const isValidEmail = (str: string) => {    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str);}
+
 export default class Contact extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
-        this.state = { feedback: '', name: '', mobile: 0, email_from: "" };
+        this.state = { feedback: '', name: '', mobile: '', email_from: "", isValid: false };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -38,6 +42,28 @@ export default class Contact extends React.Component<Props, State> {
         if (event.target.name == "email_from") {
             this.setState({ email_from: event.target.value })
         }
+        this.handleValidation();
+    }
+
+    handleBlur = () => {
+        this.handleValidation();
+    }
+
+    handleValidation = () => {
+        let formIsValid = true;
+        if (this.state && !this.state.name) {
+            formIsValid = false;
+        }
+        if (this.state && !this.state.feedback) {
+            formIsValid = false;
+        }
+        if (this.state && !this.state.mobile) {
+            formIsValid = false;
+        }
+        if (this.state && !isValidEmail(this.state.email_from)) {
+            formIsValid = false;
+        }
+        this.setState({ isValid: formIsValid });
     }
 
     handleSubmit(event: any) {
@@ -77,6 +103,7 @@ export default class Contact extends React.Component<Props, State> {
                                 name="from_name"
                                 type="text"
                                 onChange={this.handleChange}
+                                onBlur={this.handleBlur}
                                 placeholder="Name"
                                 required
                                 value={this.state.name}
@@ -93,6 +120,7 @@ export default class Contact extends React.Component<Props, State> {
                                 name="mobile_number"
                                 type="number"
                                 onChange={this.handleChange}
+                                onBlur={this.handleBlur}
                                 placeholder="Mobile Number"
                                 value={this.state.mobile}
                                 style={{ width: '100%', height: '15px' }}
@@ -108,6 +136,7 @@ export default class Contact extends React.Component<Props, State> {
                                 name="email_from"
                                 type="text"
                                 onChange={this.handleChange}
+                                onBlur={this.handleBlur}
                                 placeholder="Email"
                                 value={this.state.email_from}
                                 style={{ width: '100%', height: '15px' }}
@@ -123,6 +152,7 @@ export default class Contact extends React.Component<Props, State> {
                                 id="message"
                                 name="message"
                                 onChange={this.handleChange}
+                                onBlur={this.handleBlur}
                                 placeholder="Write your message here"
                                 required
                                 value={this.state.feedback}
@@ -131,7 +161,7 @@ export default class Contact extends React.Component<Props, State> {
                         </div>
                     </div>
                     <div className="text-box button">
-                        <input type="button" value="Send Mail" className="btn btn--submit" onClick={this.handleSubmit} />
+                        <button type="button" disabled={this.state && !this.state.isValid} className="btn btn--submit" onClick={this.handleSubmit} >Send Mail</button>
                     </div>
                 </form>
                 <div className="connect">
