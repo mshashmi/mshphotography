@@ -54,32 +54,31 @@
   }
 
   .about-name{
-    position: absolute;
-    left: 1vh;
-    top: 1vh;
+    font-size: calc(10px + 2vmin);
+    padding: 1vh;;
   }
 
   .about-info{
-    position: absolute;
-    left: 1vh;
-    top: 7vh;
+    padding: 1vh;
     text-align: justify;
-    font-size: calc(10px + 1.3vmin);
+    font-size: calc(10px + 1.1vmin);
   }
 
-  .camera-pic{
-    bottom: 0vh;
-    position: inherit;    
+  .camera-pic{  
+    padding: 1vh;;
     display: flex;
   }
 
   .left-container-main{
+    padding: 1vh;;
     display: flex;
-    flex: 1;
+    flex: 1 1;
     flex-direction: column;
+    height: -webkit-fill-available;
   }
 
   .right-container-main{
+    padding: 1vh;;
     display: flex;
     flex: 1;
     flex-direction: column;
