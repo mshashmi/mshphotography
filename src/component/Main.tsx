@@ -6,7 +6,7 @@ interface Props {
 
 interface State {
 }
-// https://drive.google.com/thumbnail?id=
+
 export default class Main extends React.Component<Props, State> {
     state: State = {
     };
@@ -14,11 +14,14 @@ export default class Main extends React.Component<Props, State> {
         return (
             <div className="App-main">
                 <div className="profile-pic">
-                    <img width="75%" src="https://drive.google.com/uc?export=view&id=1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ" alt="Profile Pic" />
+                    <img width="60%" src="https://drive.google.com/uc?export=view&id=1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ" alt="Profile Pic" />
                 </div>
                 <div className="about">
                     <div className="about-name">
                         Sajid Hashmi
+                    </div>
+                    <div className="camera-pic">
+                        <img width="35%" src="https://drive.google.com/uc?export=view&id=1x6PkzmtC4cc39TOQKEvqhlZmrHOYdMe7" alt="Camera Equipment" />
                     </div>
                     <div className="about-info">
                         I am a Software Developer at Bechtel Corporation. Currently I am also pursuing M. Tech in Software Engineering from BITS Pilani.
@@ -30,9 +33,6 @@ export default class Main extends React.Component<Props, State> {
                         Since I couldn't tell story in words, I need to carry my camera.
                         And once photography entered my blood, it became a disease for me which I couldn't recover from.
                         When someone ask me which photograph is my favourite, I reply the one I'm going to take take next.
-                    </div>
-                    <div className="camera-pic">
-                        <img width="45%" src="https://drive.google.com/uc?export=view&id=1x6PkzmtC4cc39TOQKEvqhlZmrHOYdMe7" alt="Camera Equipment" />
                     </div>
                 </div>
             </div>
