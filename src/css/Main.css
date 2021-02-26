@@ -43,7 +43,7 @@
     padding: 1vh;
     left: 1vh;
     top: 1vh;
-    width: 45%;
+    width: calc(1920px - 1300px);
     height: 95%;
   }
 
