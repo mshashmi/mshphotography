@@ -26,6 +26,7 @@
     position: fixed;
     width: 100%;
     left: 0vh;
+    overflow: auto;
   }
   
   .App-link {
@@ -45,7 +46,6 @@
     width: 100vh;
     display: flex;
     flex-direction: column;
-    flex: 3;
   }
 
   .left{

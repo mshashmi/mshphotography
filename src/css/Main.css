@@ -16,7 +16,7 @@
   .App-main {
     background-color: #d0d0d0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
@@ -26,6 +26,7 @@
     position: fixed;
     width: 100%;
     left: 0vh;
+    overflow: auto;
   }
   
   .App-link {
@@ -70,6 +71,18 @@
     bottom: 0vh;
     position: inherit;    
     display: flex;
+  }
+
+  .left-container-main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .right-container-main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
   }
   
   @keyframes App-logo-spin {

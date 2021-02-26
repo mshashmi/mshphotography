@@ -126,7 +126,7 @@ export default class Contact extends React.Component<Props, State> {
                                 placeholder="Write your message here"
                                 required
                                 value={this.state.feedback}
-                                style={{ width: '100%', height: '150px' }}
+                                style={{ width: '100%', height: '100px' }}
                             />
                         </div>
                     </div>

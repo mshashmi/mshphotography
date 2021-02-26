@@ -26,6 +26,7 @@
     position: fixed;
     width: 100%;
     left: 0vh;
+    overflow: auto;
   }
   
   .App-link {
