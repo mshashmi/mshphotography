@@ -18,13 +18,17 @@ export default class Header extends React.Component<Props, State> {
     tabIndex: 0
   };
 
+  handleClick = () => {
+    this.setState({ tabIndex: 0 });
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="App">
           <header className="App-header">
             <div className="logo">
-              <img src={Logo} alt="logo" />
+              <img className="logo-pointer" src={Logo} alt="logo" onClick={() => this.handleClick()} />
             </div>
             <Tabs selectedIndex={this.state.tabIndex}
               onSelect={(tabIndex: any) => this.setState({ tabIndex })}>
@@ -32,19 +36,19 @@ export default class Header extends React.Component<Props, State> {
                 <Tab>
                   <div className="tab-name">About</div>
                 </Tab>
-                <Tab>
+                {/* <Tab>
                   <div className="tab-name">Pictures</div>
-                </Tab>
+                </Tab> */}
                 <Tab>
-                  <div className="tab-name">Contact Us</div>
+                  <div className="tab-name">Contact</div>
                 </Tab>
               </TabList>
               <TabPanel>
                 <Main />
               </TabPanel>
-              <TabPanel>
+              {/* <TabPanel>
                 <Pictures />
-              </TabPanel>
+              </TabPanel> */}
               <TabPanel>
                 <Contact />
               </TabPanel>

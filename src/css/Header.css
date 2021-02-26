@@ -35,6 +35,10 @@
   display: flex;
 }
 
+.logo-pointer{
+  cursor: pointer;
+}
+
 .App-link {
   color: #61dafb;
 }

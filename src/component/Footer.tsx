@@ -9,7 +9,6 @@ interface State {
 
 export default class Footer extends React.Component<Props, State> {
     state: State = {
-        count: 0
     };
     render() {
         return (
