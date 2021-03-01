@@ -2,68 +2,81 @@ import * as React from 'react';
 import '../css/index.css';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Wildlife from './Wildlife';
+import Astrophotography from './Astrophotography';
+import Birds from './Birds';
+import Landscape from './Landscape';
+import Monuments from './Monuments';
+import { PictureType } from '../model';
 
 interface Props {
 }
 
 interface State {
     picture: number;
-    pictureLarge: number;
+    pictureType: PictureType[];
 }
 
 export default class Pictures extends React.Component<Props, State> {
     state: State = {
         picture: 0,
-        pictureLarge: 0
+        pictureType: []
     };
 
-    handleClick = (picture: string) => {
-        if (picture == "Animals") {
-            this.setState({ picture: 1, pictureLarge: 0 })
-        }
-        if (picture == "Birds") {
-            this.setState({ picture: 2, pictureLarge: 0 })
-        }
-        if (picture == "Landscape") {
-            this.setState({ picture: 3, pictureLarge: 0 })
-        }
+    componentDidMount() {
+        var picture: PictureType[] =
+            [
+                {
+                    TYPE_ID: 1,
+                    TYPE_NAME: "Wildlife"
+                }, {
+                    TYPE_ID: 2,
+                    TYPE_NAME: "Birds"
+                }, {
+                    TYPE_ID: 3,
+                    TYPE_NAME: "Nature"
+                }, {
+                    TYPE_ID: 4,
+                    TYPE_NAME: "Architecture"
+                }, {
+                    TYPE_ID: 5,
+                    TYPE_NAME: "Astrophotography"
+                }
+            ];
+        this.setState({ pictureType: picture });
     }
 
-    thumbnail = (id: string) => {
-        if (id) {
-            this.setState({ picture: 0, pictureLarge: 1 });
+    handleClick = (pictureType: number) => {
+        if (pictureType) {
+            this.setState({ picture: pictureType })
         }
     }
 
     render() {
         return (
             <div className="App-main-pictures">
-                <div className="left-container">
-                    <ListItem button key="Animals" onClick={() => this.handleClick("Animals")}>
-                        <ListItemText primary="Animals"></ListItemText>
-                    </ListItem>
-                    <ListItem button key="Birds" onClick={() => this.handleClick("Birds")}>
-                        <ListItemText primary="Birds"></ListItemText>
-                    </ListItem>
-                    <ListItem button key="Landscape" onClick={() => this.handleClick("Landscape")}>
-                        <ListItemText primary="Landscape"></ListItemText>
-                    </ListItem>
-                </div>
-                {this.state && this.state.picture ?
-                    <div className="right-container">Pictures are loading.
-                        <div className="profile-pic" >
-                            <input type="image" src="https://drive.google.com/thumbnail?id=1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ"
-                                onClick={() => this.thumbnail("1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ")} />
+                <div className="left-container-pictures">
+                    {this.state && this.state.pictureType && (
+                        <div className="picture-type">
+                            {
+                                this.state.pictureType.map((picture: PictureType) => {
+                                    return (
+                                        <ListItem button key={picture.TYPE_ID} onClick={() => this.handleClick(picture.TYPE_ID)}>
+                                            <ListItemText primary={picture.TYPE_NAME}></ListItemText>
+                                        </ListItem>
+                                    )
+                                })
+                            }
                         </div>
-                    </div>
-                    : ""
-                }
-                {this.state && this.state.pictureLarge ?
-                    <div>
-                        <img width="75%" src="https://drive.google.com/uc?export=view&id=1Aj6w1B70kn3pqEIY7I_lLqfUEDwGCpfZ" alt="Profile Pic" />
-                    </div>
-                    : ""
-                }
+                    )}
+                </div>
+                <div className="right-container-pictures">
+                    {this.state && this.state.picture == 1 && <Wildlife />}
+                    {this.state && this.state.picture == 2 && <Birds />}
+                    {this.state && this.state.picture == 3 && <Landscape />}
+                    {this.state && this.state.picture == 4 && <Monuments />}
+                    {this.state && this.state.picture == 5 && <Astrophotography />}
+                </div>
             </div>
         );
     }

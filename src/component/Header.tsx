@@ -36,9 +36,9 @@ export default class Header extends React.Component<Props, State> {
                 <Tab>
                   <div className="tab-name">About</div>
                 </Tab>
-                {/* <Tab>
+                <Tab>
                   <div className="tab-name">Pictures</div>
-                </Tab> */}
+                </Tab>
                 <Tab>
                   <div className="tab-name">Contact</div>
                 </Tab>
@@ -46,9 +46,9 @@ export default class Header extends React.Component<Props, State> {
               <TabPanel>
                 <Main />
               </TabPanel>
-              {/* <TabPanel>
+              <TabPanel>
                 <Pictures />
-              </TabPanel> */}
+              </TabPanel>
               <TabPanel>
                 <Contact />
               </TabPanel>
