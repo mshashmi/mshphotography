@@ -34,7 +34,6 @@ export default class Header extends React.Component<Props, State> {
               onSelect={(tabIndex: any) => this.setState({ tabIndex })}>
               <TabList>
                 <Tab>
-                  <div className="tab-name">About</div>
                 </Tab>
                 <Tab>
                   <div className="tab-name">Pictures</div>
