@@ -19,7 +19,7 @@ interface State {
 
 export default class Pictures extends React.Component<Props, State> {
     state: State = {
-        picture: 0,
+        picture: 1,
         pictureType: []
     };
 
