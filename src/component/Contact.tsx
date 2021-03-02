@@ -14,17 +14,18 @@ interface State {
     mobile: string;
     email_from: string;
     isValid: boolean;
+    mailSent: boolean;
 }
 
 declare const window: any;
 
-const isValidName = (str: string) => {    return !/[~`!\*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);}
-const isValidEmail = (str: string) => {    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str);}
+const isValidName = (str: string) => { return !/[~`!\*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str); }
+const isValidEmail = (str: string) => { return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str); }
 
 export default class Contact extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
-        this.state = { feedback: '', name: '', mobile: '', email_from: "", isValid: false };
+        this.state = { feedback: '', name: '', mobile: '', email_from: "", isValid: false, mailSent: false };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -76,7 +77,13 @@ export default class Contact extends React.Component<Props, State> {
                 reply_to: this.state.email_from,
                 to_name: "Sajid",
                 mobile: this.state.mobile
-            })
+            });
+        this.setState({ mailSent: true });
+        this.resetFeild();
+    }
+
+    resetFeild = () => {
+        this.setState({ feedback: '', name: '', mobile: '', email_from: '', isValid: false });
     }
 
     sendFeedback(templateId: any, variables: any) {
@@ -163,6 +170,9 @@ export default class Contact extends React.Component<Props, State> {
                     <div className="text-box button">
                         <button type="button" disabled={this.state && !this.state.isValid} className="btn btn--submit" onClick={this.handleSubmit} >Send Mail</button>
                     </div>
+                    {this.state && this.state.mailSent && <div className="mail-sent">
+                        <label>Thanks for your contacting me. You will receive a reply within 1 business day.</label>
+                    </div>}
                 </form>
                 <div className="connect">
                     <h5>Connect with me</h5>
